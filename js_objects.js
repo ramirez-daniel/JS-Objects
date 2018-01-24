@@ -5,7 +5,7 @@ function Cube(length, mass) {
          return length^3;
     };
     this.density = function() {
-        return mass/volume;
+        return mass / volume;
     };
     this.surfaceArea = function() {
         return 6 * length^2;
@@ -17,10 +17,30 @@ function Person(firstName, lastName, birthdate) {
     this.lastName = lastName;
     this.birthdate = birthdate;
     this.sayHi = function() {
-        if ()
+        var day = d.getDay();
+        if(day == 0) {
+            return "Hello, today's Sunday. Aww. :c";
+        } else if (day == 1) {
+            return "Oh...today's Monday...hi...";
+        } else if (day == 2) {
+            return "Hi, it's Tuesday now!";
+        } else if (day == 3) {
+            return "Halfway through Wednesday.";
+        } else if (day == 4) {
+            return "Thursday is the fake Friday!";
+        } else if (day == 5) {
+            return "FINALLY, IT'S FRIDAY!!";
+        } else (day == 6) {
+            return "Aaaaah, Saturday...relaxation ahead. c:";
+        };
     }
-    this.age = age;
-    this.getSign = getSign;
+    this.age = function() {
+        var now = new Date();
+        var age = now.getFullYear() - date.getFullYear();
+        return age;
+    }
+    this.getSign = function() {
+
     }
 }
 
@@ -39,7 +59,13 @@ function Pet(name, species, sleepy, hunger, awake) {
             return "";
         }
     }
-    this.eat = eat;
-    this.nap = nap;
-    this.wakeUp = wakeUp;
+    this.eat = function() {
+
+    }
+    this.nap = function() {
+
+    }
+    this.wakeUp = function() {
+
+    }
 }
