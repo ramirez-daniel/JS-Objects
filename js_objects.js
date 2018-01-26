@@ -10,21 +10,21 @@ function Person(firstName, lastName, birthdate) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.birthdate = birthdate;
-    this.sayHi = function() {
+    this.sayHi = function () {
         var day = d.getDay();
-        if(day == 0) {
+        if (day === 0) {
             return "Hello, today's Sunday. Aww. :c";
-        } else if (day == 1) {
+        } else if (day === 1) {
             return "Oh...today's Monday...hi...";
-        } else if (day == 2) {
+        } else if (day === 2) {
             return "Hi, it's Tuesday now!";
-        } else if (day == 3) {
+        } else if (day === 3) {
             return "Halfway through Wednesday.";
-        } else if (day == 4) {
+        } else if (day === 4) {
             return "Thursday is the fake Friday!";
-        } else if (day == 5) {
+        } else if (day === 5) {
             return "FINALLY, IT'S FRIDAY!!";
-        } else (day == 6) {
+        } else (day === 6) {
             return "Aaaaah, Saturday...relaxation ahead. c:";
         };
     }
@@ -55,21 +55,21 @@ function Pet(name, species, sleepy, hunger, awake) {
         } else {
             return "";
         }
-    };
+    }
     this.eat = function() {
         this.hunger = 0;
         this.sleepy = ++;
         if (this.species === "Dog") {
-            return "Nom nom nom nom. Yum, thank you for this deliciou food! I love you!";
+            return "Nom nom nom nom. Yum, thank you for this delicious food! I love you!";
         } else (this.species === "Cat") {
             return "Ugh, I guess I'll eat this.";
         }
-    };
+    }
     this.nap = function() {
         return "Zzzz...";
         this.sleepy = 0;
         this.awake = false;
-    };
+    }
     this.wakeUp = function() {
         this.sleepy = 0;
         this.awake = true;
@@ -77,7 +77,7 @@ function Pet(name, species, sleepy, hunger, awake) {
         if (this.species === "Dog") {
             return "I'm awake! Let's eat and then play! I love you!";
         } else (this.species === "Cat") {
-            return "Ugh, I'm awake now. Is there anything to eat around here?"
+            return "Ugh, I'm awake now. Is there anything to eat around here?";
         }
-    };
+    }
 }
