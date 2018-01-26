@@ -1,15 +1,9 @@
 function Cube(length, mass) {
     this.length = length;
     this.mass = mass;
-    this.volume = function() {
-         return length^3;
-    };
-    this.density = function() {
-        return mass / volume;
-    };
-    this.surfaceArea = function() {
-        return 6 * length^2;
-    };
+    this.volume = this.length * this.length * this.length;
+    this.density = this.mass / this.volume;
+    this.surfaceArea = this.length * this.length * 6;
 }
 
 function Person(firstName, lastName, birthdate) {
@@ -36,6 +30,7 @@ function Person(firstName, lastName, birthdate) {
     }
     this.age = function() {
         var now = new Date();
+        var date = new Date(mm/dd/yyyy);
         var age = now.getFullYear() - date.getFullYear();
         return age;
     }
@@ -51,21 +46,38 @@ function Pet(name, species, sleepy, hunger, awake) {
     this.hunger = hunger;
     this.awake = awake;
     this.speak = function() {
-        if (this.type === "Dog") {
+        this.hunger = ++;
+        this.sleepy = ++;
+        if (this.species === "Dog") {
             return "Woof! That means I love you!";
-        } else if (this.type === "Cat") {
+        } else if (this.species === "Cat") {
             return "Ugh. Meow.";
         } else {
             return "";
         }
-    }
+    };
     this.eat = function() {
-
-    }
+        this.hunger = 0;
+        this.sleepy = ++;
+        if (this.species === "Dog") {
+            return "Nom nom nom nom. Yum, thank you for this deliciou food! I love you!";
+        } else (this.species === "Cat") {
+            return "Ugh, I guess I'll eat this.";
+        }
+    };
     this.nap = function() {
-
-    }
+        return "Zzzz...";
+        this.sleepy = 0;
+        this.awake = false;
+    };
     this.wakeUp = function() {
-
-    }
+        this.sleepy = 0;
+        this.awake = true;
+        this.hunger = 4;
+        if (this.species === "Dog") {
+            return "I'm awake! Let's eat and then play! I love you!";
+        } else (this.species === "Cat") {
+            return "Ugh, I'm awake now. Is there anything to eat around here?"
+        }
+    };
 }
